@@ -1,0 +1,19 @@
+{% extends 'newsApp/layout.html'%}
+
+{% block title %}Новости на сатйе{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Новости на сайте</h1>
+        {% if news %}
+            {% for el in news %}
+                <div class = "alert alert-warning"></divclass>
+                    <h3>{{ el.title}}</h3>
+                    <p>{{ el.intro }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Нет записей</p>
+        {% endif %}
+    </div>
+{% endblock %}
