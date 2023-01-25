@@ -1,6 +1,6 @@
 {% extends 'newsApp/layout.html'%}
 
-{% block title %}Новости на сатйе{% endblock %}
+{% block title %}Новости на сайте{% endblock %}
 
 {% block content %}
     <div class="features">
@@ -10,6 +10,8 @@
                 <div class = "alert alert-warning"></divclass>
                     <h3>{{ el.title}}</h3>
                     <p>{{ el.intro }}</p>
+                    <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Читать</a>
+
                 </div>
             {% endfor %}
         {% else %}

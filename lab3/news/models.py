@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Newss(models.Model):
-    title = models.CharField('Название', max_length=30, default='ничего')
+    title = models.CharField('Название', max_length=30)
     intro = models.CharField("О чем", max_length=200)
     text = models.TextField('Новость')
     date = models.DateTimeField('Дата')
